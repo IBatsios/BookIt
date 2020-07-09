@@ -3,7 +3,8 @@
 /**
  * Database Connector class: Connects to the database translator which is specified in the config file.
  */
-class DatabaseConnector {
+class DatabaseConnector
+{
 
     /**
      * The translator class's name (defined in config/config.php).
@@ -17,7 +18,8 @@ class DatabaseConnector {
      *
      * @author Christopher Thacker
      */
-    public static function getAll($_table) {
+    public static function getAll($_table)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::getAll($_table);
     }
@@ -29,7 +31,8 @@ class DatabaseConnector {
      *
      * @author Christopher Thacker
      */
-    public static function getAllPosts() {
+    public static function getAllPosts()
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::getAllPosts();
     }
@@ -42,7 +45,8 @@ class DatabaseConnector {
      *
      * @author Ioannis Batsios
      */
-    public static function getPostByPostUuid($_postUuid) {
+    public static function getPostByPostUuid($_postUuid)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::getPostByPostUuid($_postUuid);
     }
@@ -55,7 +59,8 @@ class DatabaseConnector {
      *
      * @author Ioannis Batsios
      */
-    public static function getUuid($_userId) {
+    public static function getUuid($_userId)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::getUuid($_userId);
     }
@@ -65,7 +70,8 @@ class DatabaseConnector {
      *
      * @author Christopher Thacker
      */
-    public static function findUserByEmail($_email) {
+    public static function findUserByEmail($_email)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::findUserByEmail($_email);
     }
@@ -77,7 +83,8 @@ class DatabaseConnector {
      *
      * @author Ioannis Batsios
      */
-    public static function checkDuplicateEmails($_email) {
+    public static function checkDuplicateEmails($_email)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::checkDuplicateEmails($_email);
     }
@@ -94,7 +101,8 @@ class DatabaseConnector {
      *
      * @author Christopher Thacker
      */
-    public static function createUser($_fname, $_lname, $_email, $_password, $_uuid) {
+    public static function createUser($_fname, $_lname, $_email, $_password, $_uuid)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::createUser($_fname, $_lname, $_email, $_password, $_uuid);
     }
@@ -110,7 +118,8 @@ class DatabaseConnector {
      *
      * @author Christopher Thacker
      */
-    public static function createPost($_title, $_body, $_userUuid, $_postUuid) {
+    public static function createPost($_title, $_body, $_userUuid, $_postUuid)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::createPost($_title, $_body, $_userUuid, $_postUuid);
     }
@@ -125,10 +134,10 @@ class DatabaseConnector {
      *
      * @author Ioannis Batsios
      */
-    public static function editPost($_postUuid, $_title, $_body) {
+    public static function editPost($_postUuid, $_title, $_body)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::editPost($_postUuid, $_title, $_body);
-
     }
 
     /**
@@ -140,7 +149,8 @@ class DatabaseConnector {
      *
      * @author Christopher Thacker
      */
-    public static function deletePost($_postUuid) {
+    public static function deletePost($_postUuid)
+    {
         $dbTranslator = static::$translator;
         return $dbTranslator::deletePost($_postUuid);
     }
